@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function checkgendersel() {
+        //     var checkgender = document.getElementById("sel").value;
+        //     if (checkgender == "m") {
+        //         document.getElementById("male").style.display = "";
+        //         document.getElementById("female").style.display = "none";
+        //     } else if (checkgender == "f") {
+        //         document.getElementById("male").style.display = "none";
+        //         document.getElementById("female").style.display = "";
+        //     } else if (checkgender.value == "") {
+        //         document.getElementById("male").style.display = "none";
+        //         document.getElementById("female").style.display = "none";
+        //     }
+        // }
+
+      
+    
+    function valid() {
+      var fname = document.getElementById("fname").value.trim();
+       var lname = document.getElementById("lname").value.trim();
+       var uname = document.getElementById("uname").value.trim();
+       var password = document.getElementById("password").value.trim();
+       var confirm_password = document.getElementById("confirm_password").value.trim();
+      var email = document.getElementById("email").value.trim();
+      var tel = document.getElementById("tel").value.trim();
+
+
+
+      if (fname === "") {
+        document.getElementById("fname_error").style.display = "";
+        document.getElementById("fname_valid_error").style.display = "none";
+        return false;
+      } else if (!/^[a-zA-Z]+$/.test(fname)) {
+        document.getElementById("fname_valid_error").style.display = "";
+        document.getElementById("fname_error").style.display = "none";
+        return false;
+      } else {
+        document.getElementById("fname_error").style.display = "none";
+        document.getElementById("fname_valid_error").style.display = "none";
+      }
+
+
+       if (lname === "") {
+        document.getElementById("lname_error").style.display = "";
+        document.getElementById("lname_valid_error").style.display = "none";
+        return false;
+      } else if (!/^[a-zA-Z]+$/.test(lname)) {
+        document.getElementById("lname_valid_error").style.display = "";
+        document.getElementById("lname_error").style.display = "none";
+        return false;
+      } else {
+        document.getElementById("lname_error").style.display = "none";
+        document.getElementById("lname_valid_error").style.display = "none";
+      }
+
+
+      if (uname === "") {
+        document.getElementById("uname_error").style.display = "";
+        document.getElementById("uname_valid_error").style.display = "none";
+        return false;
+      } else if (!/^[a-zA-Z]+$/.test(uname)) {
+        document.getElementById("uname_valid_error").style.display = "";
+        document.getElementById("uname_error").style.display = "none";
+        return false;
+      } else {
+        document.getElementById("uname_error").style.display = "none";
+        document.getElementById("uname_valid_error").style.display = "none";
+      }
+
+
+      if (password === "") {
+        document.getElementById("password_error").style.display = "";
+        document.getElementById("password_valid_error").style.display = "none";
+        return false;
+      } else if (!/^[a-zA-Z]+$/.test(password)) {
+        document.getElementById("password_valid_error").style.display = "";
+        document.getElementById("password_error").style.display = "none";
+        return false;
+      } else {
+        document.getElementById("password_error").style.display = "none";
+        document.getElementById("password_valid_error").style.display = "none";
+      }
+     
+
+      if (confirm_password === "") {
+        document.getElementById("confirm_password_error").style.display = "";
+        document.getElementById("confirm_password_valid_error").style.display = "none";
+        return false;
+      } else if (!/^[a-zA-Z]+$/.test(confirm_password)) {
+        document.getElementById("confirm_password_valid_error").style.display = "";
+        document.getElementById("onfirm_password_error").style.display = "none";
+        return false;
+      } else {
+        document.getElementById("confirm_password_error").style.display = "none";
+        document.getElementById("confirm_password_valid_error").style.display = "none";
+      }
+      
+
+      if (email === "") {
+        document.getElementById("email_error").style.display = "";
+        document.getElementById("email_valid_error").style.display = "none";
+        return false;
+      } else if (!/^[a-zA-Z]+$/.test(email)) {
+        document.getElementById("email_valid_error").style.display = "";
+        document.getElementById("email_error").style.display = "none";
+        return false;
+      } else {
+        document.getElementById("email_error").style.display = "none";
+        document.getElementById("email_valid_error").style.display = "none";
+      }
+      
+
+      if (tel === "") {
+        document.getElementById("tel_error").style.display = "";
+        document.getElementById("tel_valid_error").style.display = "none";
+        return false;
+      } else if (!/^[a-zA-Z]+$/.test(tel)) {
+        document.getElementById("tel_valid_error").style.display = "";
+        document.getElementById("tel_error").style.display = "none";
+        return false;
+      } else {
+        document.getElementById("tel_error").style.display = "none";
+        document.getElementById("tel_valid_error").style.display = "none";
+      }
+
+
+
+      return true;
+    }
+    </script>
+    </head>
+  
+<!-- //   function valid() {
+//       var fname = document.getElementById("fname").value.trim();
+//       var lname = document.getElementById("lname").value.trim();
+//       var uname = document.getElementById("uname").value.trim();
+//       var password = document.getElementById("password").value.trim();
+//       var confirm_password = document.getElementById("confirm_password").value.trim();
+//       var email = document.getElementById("email").value.trim();
+//       var tel = document.getElementById("tel").value.trim();
+
+//       // First Name
+//       if (fname === "") {
+//         document.getElementById("fname_error").style.display = "";
+//         document.getElementById("fname_valid_error").style.display = "none";
+//         return false;
+//       } else if (!/^[a-zA-Z]+$/.test(fname)) {
+//         document.getElementById("fname_error").style.display = "none";
+//         document.getElementById("fname_valid_error").style.display = "";
+//         return false;
+//       } else {
+//         document.getElementById("fname_error").style.display = "none";
+//         document.getElementById("fname_valid_error").style.display = "none";
+//       }
+
+//       // Last Name
+//       if (lname === "") {
+//         document.getElementById("lname_error").style.display = "";
+//         document.getElementById("lname_valid_error").style.display = "none";
+//         return false;
+//       } else if (!/^[a-zA-Z]+$/.test(lname)) {
+//         document.getElementById("lname_error").style.display = "none";
+//         document.getElementById("lname_valid_error").style.display = "";
+//         return false;
+//       } else {
+//         document.getElementById("lname_error").style.display = "none";
+//         document.getElementById("lname_valid_error").style.display = "none";
+//       }
+
+//       // Username
+//       if (uname === "") {
+//         document.getElementById("uname_error").style.display = "";
+//         document.getElementById("uname_valid_error").style.display = "none";
+//         return false;
+//       } else if (!/^[a-zA-Z0-9_]+$/.test(uname)) {
+//         document.getElementById("uname_error").style.display = "none";
+//         document.getElementById("uname_valid_error").style.display = "";
+//         return false;
+//       } else {
+//         document.getElementById("uname_error").style.display = "none";
+//         document.getElementById("uname_valid_error").style.display = "none";
+//       }
+
+//       // Password
+//       if (password === "") {
+//         document.getElementById("password_error").style.display = "";
+//         document.getElementById("password_valid_error").style.display = "none";
+//         return false;
+//       } else if (password.length < 6) {
+//         document.getElementById("password_error").style.display = "none";
+//         document.getElementById("password_valid_error").style.display = "";
+//         return false;
+//       } else {
+//         document.getElementById("password_error").style.display = "none";
+//         document.getElementById("password_valid_error").style.display = "none";
+//       }
+
+//       // Confirm Password
+//       if (confirm_password === "") {
+//         document.getElementById("confirm_password_error").style.display = "";
+//         document.getElementById("confirm_password_valid_error").style.display = "none";
+//         return false;
+//       } else if (confirm_password !== password) {
+//         document.getElementById("confirm_password_error").style.display = "none";
+//         document.getElementById("confirm_password_valid_error").style.display = "";
+//         return false;
+//       } else {
+//         document.getElementById("confirm_password_error").style.display = "none";
+//         document.getElementById("confirm_password_valid_error").style.display = "none";
+//       }
+
+//       // Email
+//       if (email === "") {
+//         document.getElementById("email_error").style.display = "";
+//         document.getElementById("email_valid_error").style.display = "none";
+//         return false;
+//       } else if (!/^\S+@\S+\.\S+$/.test(email)) {
+//         document.getElementById("email_error").style.display = "none";
+//         document.getElementById("email_valid_error").style.display = "";
+//         return false;
+//       } else {
+//         document.getElementById("email_error").style.display = "none";
+//         document.getElementById("email_valid_error").style.display = "none";
+//       }
+
+//       // Phone
+//       if (tel === "") {
+//         document.getElementById("tel_error").style.display = "";
+//         document.getElementById("tel_valid_error").style.display = "none";
+//         return false;
+//       } else if (!/^[0-9]{10}$/.test(tel)) {
+//         document.getElementById("tel_error").style.display = "none";
+//         document.getElementById("tel_valid_error").style.display = "";
+//         return false;
+//       } else {
+//         document.getElementById("tel_error").style.display = "none";
+//         document.getElementById("tel_valid_error").style.display = "none";
+//       }
+
+//       return true;
+//     }
+//    -->
+
+
+<body>
+    <form action="https://www.google.com/" method="GET" onsubmit="return valid();">
+
+    <label >First Name</label>
+    <input type="text" id="fname" placeholder="Enter first name" /><br />
+    <span style="color: red; display: none;" id="fname_error">*Enter your name</span>
+    <br />
+    <span style="color: red; display: none;" id="fname_valid_error">*Enter a valid name</span>
+    <br />
+
+    <label >Last Name</label>
+    <input type="text" id="lname" placeholder="Enter last name" /><br/>
+    <span style="color: red; display: none;" id="lname_error">*Enter a last name </span>
+    <br />
+    <span style="color: red; display: none;" id="lname_valid_error">*Enter a valid last name</span>
+    <br />
+
+    <label for="username">User Name</label>
+    <input type="text" id="uname" placeholder="Enter your username" /><br /><br />
+     <span style="color: red; display: none;" id="uname_error">*Enter a user name </span>
+    <br />
+    <span style="color: red; display: none;" id="uname_valid_error">*Enter a valid user name</span>
+    <br />
+
+
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="Enter password" /><br /><br />
+      <span style="color: red; display: none;" id="password_error">*Enter a password </span>
+    <br />
+    <span style="color: red; display: none;" id="password_valid_error">*Enter a valid password</span>
+    <br />
+
+
+    <label for="confirm_password">Confirm Password</label>
+    <input type="password" id="confirm_password" placeholder="Confirm password" /><br /><br />
+     <span style="color: red; display: none;" id="confirm_password_error">*Enter a confirm_password</span>
+    <br />
+    <span style="color: red; display: none;" id="confirm_password_valid_error">*Enter a valid confirm_password</span>
+    <br />
+
+
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="Enter email" /><br /><br />
+     <span style="color: red; display: none;" id="email_error">*Enter a email </span>
+    <br />
+    <span style="color: red; display: none;" id="email_valid_error">*Enter a valid email</span>
+    <br />
+
+
+
+    <label for="tel">Phone</label>
+    <input type="tel" id="tel" placeholder="Enter phone number" /><br /><br />
+     <span style="color: red; display: none;" id="tel_error">*Enter a tel number </span>
+    <br />
+    <span style="color: red; display: none;" id="tel_valid_error">*Enter a valid tel number</span>
+    <br />
+
+
+    <input type="submit" value="Submit" />
+  </form> 
+
+    <select id="sel" onchange="checkgender()">
+        <option value="">==select your gender</option>
+        <option value="m">male</option>
+        <option value="f">female</option>
+
+
+    </select>
+    <img src="male default.avif" style="display: none;" id="male" alt="">
+    <img src="female default.jpg" style="display: none;" id="female" alt="">
+
+
+</body>
+
+</html>
